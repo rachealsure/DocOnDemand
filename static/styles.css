@@ -1,0 +1,192 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+}
+
+/* Navbar */
+.navbar {
+    padding: 1rem;
+}
+
+.navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.navbar-nav .nav-link {
+    color: #555;
+    margin-right: 1rem;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff;
+}
+
+/* Header */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3);
+    color: white;
+    text-align: center;
+    padding: 3rem 1rem;
+}
+
+header h1 {
+    font-size: 2.5rem;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+header a {
+    font-size: 1.2rem;
+    padding: 0.5rem 1.5rem;
+    background-color: white;
+    color: #007bff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+header a:hover {
+    background-color: #007bff;
+    color: white;
+}
+
+/* Sections */
+section {
+    padding: 2rem 1rem;
+}
+
+section h2 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+section p {
+    font-size: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards (Dashboard Stats) */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.card-body h5 {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* List Groups */
+.list-group-item {
+    font-size: 1rem;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border: 1px solid #ddd;
+}
+
+.list-group-item button {
+    margin-left: 1rem;
+}
+
+/* Footer */
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+}
+
+/* Form Elements */
+form {
+    margin-top: 1.5rem;
+}
+
+form .form-control {
+    padding: 0.75rem;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 0.75rem 1rem;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Modal */
+.modal-content {
+    border-radius: 10px;
+}
+
+.modal-header {
+    background-color: #007bff;
+    color: white;
+    border-bottom: none;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    header a {
+        font-size: 1rem;
+        padding: 0.5rem 1rem;
+    }
+
+    .card-body h5 {
+        font-size: 1rem;
+    }
+
+    .list-group-item {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .list-group-item button {
+        margin: 0.5rem 0 0 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header h1 {
+        font-size: 1.5rem;
+    }
+
+    header p {
+        font-size: 0.9rem;
+    }
+
+    header a {
+        font-size: 0.9rem;
+    }
+
+    form .form-control {
+        font-size: 0.9rem;
+    }
+}

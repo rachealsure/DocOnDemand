@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/styles.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">DocOnDemand</a>
+            <ul class="navbar-nav ms-auto">
+                <li class="nav-item"><a class="nav-link" href="/logout/">Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <h1>Welcome, {{ user.username }}</h1>
+        {% if user.is_patient %}
+        <h3>Your Appointments</h3>
+        <ul>
+            {% for appointment in appointments %}
+                <li>{{ appointment.date }} with Dr. {{ appointment.doctor.username }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+            <div class="row my-4">
+                <div class="col-md-4">
+                    <div class="card text-white bg-success mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Upcoming Appointments</h5>
+                            <p class="card-text">{{ appointments|length }}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="card text-white bg-info mb-3">
+                        <div class="card-body">
+                            <h5 class="card-title">Consultations Completed</h5>
+                            <p class="card-text">{{ completed_appointments }}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        
+            <a href="/appointments/book/" class="btn btn-primary">Book New Appointment</a>
+            <a href="/profile/" class="btn btn-secondary">Update Profile</a>
+        </div>        
+        
+        {% if user.is_doctor %}
+        <h3>Your Patients</h3>
+        <ul>
+            {% for appointment in appointments %}
+                <li>{{ appointment.date }} with {{ appointment.patient.username }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+    </div>
+</body>
+</html>
