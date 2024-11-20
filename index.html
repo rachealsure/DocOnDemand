@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DocOnDemand</title>
+    <link rel="stylesheet" href="main.css">
+</head>
+<body>
+    <!--header section-->
+    <header class="navbar">
+        <img src="image.jpeg" alt="Telemedicine Logo">
+        <h1>DocOnDemand</h1>
+        <nav class="nav-links">
+            <ul>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+        <div class="hamburger-menu" onclick="toggleMenu()">&#9776;</div>
+    </header>
+
+    <div class="container">
+        <div class="main-content">
+                <h2 id="about" class="section-title">About </h2>
+                <p class="about-text">In today’s fast-paced world, accessing healthcare remotely has never been more important. Our telemedicine services offer you the convenience of consulting with qualified healthcare professionals from the comfort of your home.</p>
+                <h2 class="section-title">Welcome to the Future of Healthcare</h2>
+                <p class="about-text">Providing top-notch virtual consultations from the comfort of your home.</p>
+            </div>
+
+        <!-- Services Section -->
+        <section class="services" id="services">
+            <div class="services-left">
+                <h2>Our Services</h2>
+                <div class="service-item">
+                    <h4>Pediatrics</h4>
+                    <p>Consult with expert pediatricians online.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Cardiology</h4>
+                    <p>Get advice from heart specialists anytime, anywhere.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Dermatology</h4>
+                    <p>Virtual consultations for all skin-related issues.</p>
+                </div>
+            </div>
+            <div class="services-right">
+                <div class="service-item">
+                    <h4>Obstetrics and Gynecology</h4>
+                    <p>Virtual consultations for all women reproductive health issues.</p>
+                </div>
+                <div class="service-item">
+                    <h4>Psychiatry</h4>
+                    <p>Virtual consultations for all therapy-related issues.</p>
+                </div>
+            </div>
+        </section>
+        <!-- Blog Section -->
+            <section class="blog">
+                <h2>Users' Experiences</h2>
+                <div class="blog-grid">
+                    <div class="blog-item">
+                        <h4>John W.</h4>
+                        <p>"Using DocOnDemand made it so easy to consult with my doctor without leaving my house. The process was smooth and hassle-free!"</p>
+                    </div>
+                    <div class="blog-item">
+                        <h4>Sarah K.</h4>
+                        <p>"As a working mom, finding time to visit a doctor was a challenge. DocOnDemand's telemedicine service is a lifesaver for me and my family."</p>
+                    </div>
+                    <div class="blog-item">
+                        <h4>Michael B.</h4>
+                        <p>"The virtual consultation was thorough and the doctor answered all my questions. It saved me time and I felt cared for."</p>
+                    </div>
+                </div>
+            </section>
+        
+        
+        <!-- Appointment Section -->
+        <section class="appointment">
+            <h2>Book an Appointment</h2>
+            <form id="appointmentForm">
+                <!-- Name Field -->
+                <label for="name">Full Name:</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+                <span id="nameError" class="error"></span><br>
+
+                <!-- Email Field -->
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email" required>
+                <span id="emailError" class="error"></span><br>
+
+                <!-- Age Field -->
+                <label for="age">Age:</label>
+                <input type="number" id="age" name="age" placeholder="Enter your age" required>
+                <span id="ageError" class="error"></span><br>
+
+                <!-- Service Selection -->
+                <label for="service">Service:</label>
+                <select id="service" name="service" required>
+                    <option value="">Select a service</option>
+                    <option value="Pediatrics">Pediatrics</option>
+                    <option value="Cardiology">Cardiology</option>
+                    <option value="Dermatology">Dermatology</option>
+                    <option value="Obstetrics and Gynecology">Obstetrics and Gynecology</option>
+                    <option value="Psychiatry">Psychiatry</option>
+                    <option value="Nutrition and Dietetics">Nutrition and Dietetics</option>
+                </select>
+                <span id="serviceError" class="error"></span><br>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit</button>
+            </form>
+        </section>
+    </div>
+
+    <!-- Footer Section -->
+    <footer id="contact">
+        <a href="#facebook">Facebook</a>
+        <a href="#twitter">Twitter</a>
+        <a href="#instagram">Instagram</a>
+        <a href="#linkedin">LinkedIn</a>
+        <p>Email: contact@docondemand.com | Phone: (076) 9467 7422</p>
+        <p>&copy; 2024 DocOnDemand. All Rights Reserved.</p>
+    </footer>
+
+    <script src="sc.js"></script>
+</body>
+</html>
