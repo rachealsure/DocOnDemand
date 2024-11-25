@@ -1,18 +1,37 @@
-/* General Reset */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: Arial, sans-serif;
 }
 
 body {
+    background-image: url(black.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
     font-family: 'Arial', sans-serif;
     line-height: 1.6;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+
 }
 
 /* Navbar */
 .navbar {
     padding: 1rem;
+    justify-content: space-between;
+    width: 100%;
+    z-index: 100;
+    background-color: rgba(0, 0, 0, 0); /* Transparent background */
+    color: black;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.navbar img {
+    height: 50px;
+    border-radius: 50%;
 }
 
 .navbar-brand {
@@ -21,18 +40,18 @@ body {
 }
 
 .navbar-nav .nav-link {
-    color: #555;
+    color: black;
     margin-right: 1rem;
 }
 
 .navbar-nav .nav-link:hover {
-    color: #007bff;
+    color: lightskyblue;
 }
 
 /* Header */
 header {
-    background: linear-gradient(135deg, #007bff, #0056b3);
-    color: white;
+    background: linear-gradient(135deg, lightsteelblue,lightsteelblue );
+    color: black;
     text-align: center;
     padding: 3rem 1rem;
 }
@@ -49,7 +68,7 @@ header a {
     font-size: 1.2rem;
     padding: 0.5rem 1.5rem;
     background-color: white;
-    color: #007bff;
+    color: lightsteelblue;
     text-decoration: none;
     border-radius: 5px;
     transition: background-color 0.3s;
@@ -121,7 +140,7 @@ form .form-control {
 }
 
 form button {
-    background-color: #007bff;
+    background-color: lightsteelblue;
     color: white;
     border: none;
     padding: 0.75rem 1rem;
